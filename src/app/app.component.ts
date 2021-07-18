@@ -14,7 +14,7 @@ import { CardComponent } from './components/card/card.component';
 export class AppComponent {
   title = 'Posts';
   postTitle = 'Post';
-  
+  openModal = false;
   postDescription: string =
     ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur  accusamus tenetur, magnam veritatis commodi ullam?';
 
@@ -26,6 +26,7 @@ export class AppComponent {
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
 
   addComponent() {
+    console.log(this.openModal);
     if (this.components.length < 10) {
       const componentFactory =
         this.componentFactoryResolver.resolveComponentFactory(CardComponent);
@@ -33,7 +34,7 @@ export class AppComponent {
 
       this.components.push(component);
     } else {
-      alert('You are not able to add new cards your limit reached');
+      this.openModal = true;
     }
   }
 

@@ -1,18 +1,33 @@
 .card {
   background-color: white;
-  padding: 20px 30px;
-  border-radius: 30px;
+  border-radius: 15px;
   box-shadow: 0 3px 9px #9bb0b587;
+  animation: cardAnimation 0.3s linear;
 }
 
 .card__title {
-  color: #435462;
+  color: white;
   font-size: 23px;
-  margin-bottom: 10px;
   text-transform: capitalize;
+  margin: 0;
 }
-
+.card__header {
+  background-color: #2a7386;
+  border-radius: 15px 15px 0 0;
+  padding: 11px 20px;
+  margin: 0;
+}
 .card__description {
   color: #1b252e;
   font-size: 18px;
+  padding: 20px;
+}
+
+@keyframes cardAnimation {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

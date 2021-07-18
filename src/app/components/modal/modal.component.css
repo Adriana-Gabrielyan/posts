@@ -1,0 +1,38 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  background: #000000a6;
+}
+.modal__content {
+  max-width: 500px;
+  margin: auto;
+  background-color: white;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 15px;
+  position: relative;
+  animation: fadeIn .5s;
+}
+.modal__close {
+  position: absolute;
+  top: 8px;
+  right: 13px;
+  background: transparent;
+  border: 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: 20px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
