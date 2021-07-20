@@ -1,11 +1,21 @@
 <div class="container">
   <h1 class="container__title">{{ title }}</h1>
   <div class="btn__container">
-    <button class="btn btn--primary" (click)="addComponent()">Add post</button>
-    <button class="btn btn--red" (click)="removeComponent()">
-      Remove last post
-    </button>
-    <button class="btn btn--red" (click)="removeAll()">Remove all posts</button>
+    <app-button
+      text="Add Post"
+      (click)="addComponent()"
+      additionalClasses="btn--primary"
+    ></app-button>
+    <app-button
+      text=" Remove last post"
+      (click)="removeComponent()"
+      additionalClasses="btn--red"
+    ></app-button>
+    <app-button
+      text="Remove all posts"
+      (click)="removeAll()"
+      additionalClasses="btn--red"
+    ></app-button>
   </div>
   <div class="card-container">
     <ng-template #postContent> </ng-template>
